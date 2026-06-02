@@ -104,9 +104,7 @@
                     </div>
                     <div class="footer-bottom-right">
                         <a href="/privacy">Privacy Policy</a>
-                        <a href="/terms">Terms of Use</a>
-                        <a href="/cookies Policy">Contact</a>
-                        <a href="/contact">Contact</a>
+                        <a href="/terms">Terms of Use</a>                        
                     </div>
                 </div>
             </div>
