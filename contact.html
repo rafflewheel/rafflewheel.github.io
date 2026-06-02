@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="theme-color" content="#8b5cf6">
+    <title>Contact Us · RaffleWheel</title>
+    <meta name="description" content="Get in touch with Abraham at RaffleWheel for feature requests, business collaborations, or general questions.">
+    <link rel="canonical" href="https://rafflewheel.github.io/contact">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+  
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <style>
+        .contact-section {
+            padding: 120px 0 80px;
+            background: linear-gradient(135deg, #fef3ff 0%, #fff7ed 50%, #f0f9ff 100%);
+            min-height: 100vh;
+        }
+        .contact-card {
+            background: var(--c-card);
+            border: 1px solid var(--c-border);
+            border-radius: var(--radius-xl);
+            padding: 48px;
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+            max-width: 650px;
+            margin: 40px auto 0;
+        }
+        .contact-methods {
+            margin-top: 32px;
+        }
+        .email-link {
+            display: inline-block;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #8b5cf6;
+            text-decoration: none;
+            margin: 16px 0;
+            word-break: break-all;
+            transition: color var(--transition-fast);
+        }
+        .email-link:hover {
+            color: #ec4899;
+        }
+        .contact-note {
+            font-size: 14px;
+            color: var(--c-text-soft);
+            line-height: 1.6;
+        }
+        @media (max-width: 768px) {
+            .contact-section { padding: 100px 0 60px; }
+            .contact-card { padding: 32px 20px; }
+            .email-link { font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Container -->
+    <div id="header-container"></div>
+
+    <main>
+        <section class="contact-section">
+            <div class="container">
+                <div class="section-head" style="text-align: center; max-width: 600px; margin: 0 auto;">
+                    <span class="section-tag">Get in Touch</span>
+                    <h1 class="section-title">Drop a <span class="gradient-text">Message</span></h1>
+                    <p class="section-subtitle">Have a feature request, optimization feedback, or a business suggestion? I would love to hear from you.</p>
+                </div>
+
+                <div class="contact-card">
+                    <div style="font-size: 48px; margin-bottom: 16px;">✉️</div>
+                    <h2>Direct Inbox</h2>
+                    <p class="contact-note">Whether you need custom developer setups or simply want to chat about SEO integrations, connect via our official operational inbox below:</p>
+                    
+                    <div class="contact-methods">
+                        <a href="mailto:anwaralamkhi22@gmail.com" class="email-link">anwaralamkhi22@gmail.com</a>
+                    </div>
+
+                    <p class="contact-note" style="margin-top: 24px; font-size: 13px; color: var(--c-text-mute);">
+                        Please allow 24-48 hours for a comprehensive reply. Thank you for making our random picker ecosystem better every day[cite: 2]!
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Container -->
+    <div id="footer-container"></div>
+
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
+</body>
+</html>
