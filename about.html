@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="theme-color" content="#8b5cf6">
+    <title>About Us · RaffleWheel</title>
+    <meta name="description" content="Meet Abraham, the developer behind RaffleWheel. Learn more about our mission to create the ultimate free online spin the wheel tool.">
+    <link rel="canonical" href="https://rafflewheel.github.io/about">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png"> 
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <style>
+        .about-section {
+            padding: 120px 0 80px;
+            background: linear-gradient(135deg, #fef3ff 0%, #fff7ed 50%, #f0f9ff 100%);
+            min-height: 100vh;
+        }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+            margin-top: 40px;
+        }
+        .about-card {
+            background: var(--c-card);
+            border: 1px solid var(--c-border);
+            border-radius: var(--radius-xl);
+            padding: 40px;
+            box-shadow: var(--shadow-lg);
+        }
+        .about-content h2 {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: var(--c-text);
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+        .about-content p {
+            color: var(--c-text-soft);
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        .creator-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: white;
+            border: 1px solid var(--c-border);
+            padding: 12px 20px;
+            border-radius: var(--radius-lg);
+            margin-top: 16px;
+        }
+        .creator-avatar {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, #8b5cf6, #ec4899);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 18px;
+        }
+        .creator-info h4 {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--c-text);
+            margin: 0;
+        }
+        .creator-info span {
+            font-size: 12px;
+            color: var(--c-text-mute);
+            display: block;
+        }
+        @media (max-width: 768px) {
+            .about-section { padding: 100px 0 60px; }
+            .about-grid { grid-template-columns: 1fr; gap: 32px; }
+            .about-card { padding: 24px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Container -->
+    <div id="header-container"></div>
+
+    <main>
+        <section class="about-section">
+            <div class="container">
+                <div class="section-head" style="text-align: center; margin-bottom: 60px;">
+                    <span class="section-tag">Our Story</span>
+                    <h1 class="section-title">Behind The <span class="gradient-text">Wheel</span></h1>
+                    <p class="section-subtitle">Discover how RaffleWheel transforms raw browser algorithms into fun, interactive decision tools for everyone.</p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-content">
+                        <h2>Making Choice Fun & Simple</h2>
+                        <p>RaffleWheel was built out of a simple need: a clean, responsive, and completely free online wheel spinner that doesn't bog down users with intrusive pop-up trackers or complex registration forms[cite: 2]. Whether you are a teacher picking the next student, a streamer giving away prizes, or an individual deciding on dinner, we've got you covered[cite: 2].</p>
+                        <p>Our wheel spinner runs purely on client-side technology. That means your lists, names, and customized properties live inside your browser alone—offering you lightning-fast randomizations with built-in privacy assurance[cite: 2].</p>
+                        
+                        <div class="creator-badge">
+                            <div class="creator-avatar">A</div>
+                            <div class="creator-info">
+                                <h4>Abraham</h4>
+                                <span>Web Developer & SEO Expert</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-card">
+                        <h2>Why Choose Us?</h2>
+                        <ul style="padding-left: 0; list-style: none;">
+                            <li style="margin-bottom: 16px; display: flex; gap: 12px; align-items: flex-start;">
+                                <span style="color: #8b5cf6; font-weight: bold; font-size: 18px;">✓</span>
+                                <div>
+                                    <strong style="color: var(--c-text); display: block;">Privacy-First Architecture</strong>
+                                    <span style="font-size: 14px; color: var(--c-text-soft);">No sign-ups or databases. Everything handles cleanly inside local storage[cite: 2].</span>
+                                </div>
+                            </li>
+                            <li style="margin-bottom: 16px; display: flex; gap: 12px; align-items: flex-start;">
+                                <span style="color: #ec4899; font-weight: bold; font-size: 18px;">✓</span>
+                                <div>
+                                    <strong style="color: var(--c-text); display: block;">Optimized & Lightweight</strong>
+                                    <span style="font-size: 14px; color: var(--c-text-soft);">Engineered using lightweight semantic code for fast loading across all mobile layouts[cite: 1, 2].</span>
+                                </div>
+                            </li>
+                            <li style="margin-bottom: 0; display: flex; gap: 12px; align-items: flex-start;">
+                                <span style="color: #fbbf24; font-weight: bold; font-size: 18px;">✓</span>
+                                <div>
+                                    <strong style="color: var(--c-text); display: block;">100% Free Asset</strong>
+                                    <span style="font-size: 14px; color: var(--c-text-soft);">Full feature parity accessible right inside your browser without paying a single dime[cite: 2].</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Container -->
+    <div id="footer-container"></div>
+
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
+</body>
+</html>
