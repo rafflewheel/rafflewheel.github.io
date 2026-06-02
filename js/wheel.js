@@ -19,6 +19,8 @@ class SpinWheel {
         this.currentRotation = 0;
         this.isSpinning = false;
         this.centerTitle = 'SPIN!';
+        this.tickEnabled = true;  // FIXED: Added missing property
+        this.animationFrameId = null;
 
         this.resize();
         window.addEventListener('resize', () => this.resize());
@@ -35,6 +37,7 @@ class SpinWheel {
         this.canvas.style.height = size + 'px';
 
         this.size = size;
+        this.dpr = dpr;
         this.ctx.setTransform(1, 0, 0, 1, 0, 0);
         this.ctx.scale(dpr, dpr);
 
@@ -65,7 +68,16 @@ class SpinWheel {
         const cy = this.size / 2;
         const radius = this.size / 2 - 6;
 
+        // Clear canvas with proper transform reset
+        ctx.save();
+        ctx.setTransform(1, 0, 0, 1, 0, 0);
+        ctx.scale(this.dpr, this.dpr);
         ctx.clearRect(0, 0, this.size, this.size);
+        
+        // Apply current rotation
+        ctx.translate(cx, cy);
+        ctx.rotate(this.currentRotation * Math.PI / 180);
+        ctx.translate(-cx, -cy);
 
         const numSlices = this.entries.length;
         const arc = (2 * Math.PI) / numSlices;
@@ -134,6 +146,8 @@ class SpinWheel {
         innerGrad.addColorStop(1, 'rgba(255,255,255,0)');
         ctx.fillStyle = innerGrad;
         ctx.fill();
+        
+        ctx.restore();
     }
 
     getFontSize() {
@@ -159,7 +173,7 @@ class SpinWheel {
 
         return new Promise((resolve) => {
             this.isSpinning = true;
-            this.container.classList.add('spinning');
+            if (this.container) this.container.classList.add('spinning');
 
             // Determine target
             let winnerIndex;
@@ -176,7 +190,10 @@ class SpinWheel {
             // Random extra rotations (5-8 full turns) for visual drama
             const extraSpins = 5 + Math.floor(Math.random() * 3);
             const currentNormalized = ((this.currentRotation % 360) + 360) % 360;
-            const totalRotation = (extraSpins * 360) + (targetAngle - currentNormalized);
+            let totalRotation = (extraSpins * 360) + (targetAngle - currentNormalized);
+            
+            // Ensure we always spin forward
+            if (totalRotation <= 0) totalRotation += 360;
 
             const startTime = performance.now();
             const startRotation = this.currentRotation;
@@ -192,20 +209,29 @@ class SpinWheel {
                 const easedProgress = easeOut(progress);
 
                 this.currentRotation = startRotation + (targetRotation - startRotation) * easedProgress;
-                this.canvas.style.transform = `rotate(${this.currentRotation}deg)`;
+                this.draw();  // Redraw with current rotation
 
-                // Play tick sound at slice boundaries
-                if (progress < 1) {
-                    this.playTick();
+                // Play tick sound at slice boundaries (simplified)
+                if (progress < 1 && this.tickEnabled) {
+                    const tickProgress = (this.currentRotation % 360) / 360;
+                    const lastTickProgress = ((startRotation + (targetRotation - startRotation) * Math.max(0, progress - 0.02)) % 360) / 360;
+                    if (Math.floor(tickProgress * numSlices) !== Math.floor(lastTickProgress * numSlices)) {
+                        this.playTick();
+                    }
                 }
 
                 if (progress < 1) {
-                    requestAnimationFrame(animate);
+                    this.animationFrameId = requestAnimationFrame(animate);
                 } else {
-                    this.currentRotation = ((this.currentRotation % 360) + 360) % 360;
-                    this.canvas.style.transform = `rotate(${this.currentRotation}deg)`;
+                    // Final alignment
+                    this.currentRotation = ((targetRotation % 360) + 360) % 360;
+                    this.draw();
                     this.isSpinning = false;
-                    this.container.classList.remove('spinning');
+                    if (this.container) this.container.classList.remove('spinning');
+                    
+                    // Highlight the winner briefly
+                    this.highlightWinner(winnerIndex);
+                    
                     resolve({
                         index: winnerIndex,
                         entry: this.entries[winnerIndex]
@@ -213,7 +239,10 @@ class SpinWheel {
                 }
             };
 
-            requestAnimationFrame(animate);
+            if (this.animationFrameId) {
+                cancelAnimationFrame(this.animationFrameId);
+            }
+            this.animationFrameId = requestAnimationFrame(animate);
         });
     }
 
@@ -225,31 +254,58 @@ class SpinWheel {
         this.lastTickTime = now;
         if (window.tickSound) {
             try {
-                window.tickSound.currentTime = 0;
-                window.tickSound.play().catch(() => {});
+                window.tickSound.play();
             } catch (e) {}
         }
     }
 
     highlightWinner(index) {
-        // Visual flash effect on winner
+        // Visual flash effect on winner slice
+        if (!this.ctx || !this.entries.length) return;
+        
         const ctx = this.ctx;
-        const numSlices = this.entries.length;
-        const arc = (2 * Math.PI) / numSlices;
-        const startAngle = index * arc - Math.PI / 2;
-        const endAngle = startAngle + arc;
         const cx = this.size / 2;
         const cy = this.size / 2;
         const radius = this.size / 2 - 6;
-
+        const numSlices = this.entries.length;
+        const arc = (2 * Math.PI) / numSlices;
+        
+        // Save current state
         ctx.save();
+        ctx.setTransform(1, 0, 0, 1, 0, 0);
+        ctx.scale(this.dpr, this.dpr);
+        
+        // Apply current rotation to match drawn wheel
+        ctx.translate(cx, cy);
+        ctx.rotate(this.currentRotation * Math.PI / 180);
+        ctx.translate(-cx, -cy);
+        
+        const startAngle = index * arc - Math.PI / 2;
+        const endAngle = startAngle + arc;
+        
+        // Draw highlight overlay
         ctx.beginPath();
         ctx.moveTo(cx, cy);
         ctx.arc(cx, cy, radius, startAngle, endAngle);
         ctx.closePath();
-        ctx.fillStyle = 'rgba(255,255,255,0.5)';
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.4)';
         ctx.fill();
+        
+        // Add a glow effect
+        ctx.shadowBlur = 20;
+        ctx.shadowColor = 'gold';
+        ctx.beginPath();
+        ctx.moveTo(cx, cy);
+        ctx.arc(cx, cy, radius, startAngle, endAngle);
+        ctx.closePath();
+        ctx.fill();
+        
         ctx.restore();
+        
+        // Remove highlight after a moment (redraw without highlight)
+        setTimeout(() => {
+            this.draw();
+        }, 500);
     }
 }
 
