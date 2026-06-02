@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="theme-color" content="#8b5cf6">
+    <title>Spin The Wheel · Free Online Wheel Spinner & Random Picker | RaffleWheel</title>
+    <meta name="description" content="Free online spin the wheel, raffle wheel, and random wheel picker. Create custom wheels for classrooms, giveaways, prize draws, and decision making. Free wheel spinner with no sign-up.">
+    <meta name="keywords" content="raffle wheel, spin the wheel, classroom spinner wheel, random student picker wheel, free online spinner for classroom, interactive spin wheel, random wheel generator, spin the wheel generator, random wheel picker, wheel picker, free spin wheel, free wheel spinner, spin wheel game, spinning wheel game, giveaway wheel spinner, prize wheel, digital wheel spinner, lucky spin">
+    <meta name="author" content="RaffleWheel">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://rafflewheel.github.io/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rafflewheel.github.io/">
+    <meta property="og:title" content="Spin The Wheel · Free Online Wheel Spinner & Random Picker">
+    <meta property="og:description" content="Free online spin the wheel, raffle wheel, and random wheel picker for classrooms, giveaways, and prize draws. No sign-up required.">
+    <meta property="og:image" content="https://rafflewheel.github.io/images/wheel-hero.svg">
+    <meta property="og:site_name" content="RaffleWheel">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Spin The Wheel · Free Online Wheel Spinner">
+    <meta name="twitter:description" content="Free online spin the wheel, raffle wheel, and random wheel picker.">
+    <meta name="twitter:image" content="https://rafflewheel.github.io/images/wheel-hero.svg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%238b5cf6'/%3E%3Ccircle cx='50' cy='50' r='35' fill='%23ec4899'/%3E%3Ccircle cx='50' cy='50' r='10' fill='%23fbbf24'/%3E%3C/svg%3E">
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- JSON-LD Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "RaffleWheel - Spin The Wheel",
+        "url": "https://rafflewheel.github.io/",
+        "description": "Free online spin the wheel, raffle wheel, and random wheel picker for classrooms, giveaways, prize draws, and decision making.",
+        "applicationCategory": "MultimediaApplication",
+        "operatingSystem": "Any (Web Browser)",
+        "browserRequirements": "Modern web browser with JavaScript enabled",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "featureList": [
+            "Custom spin the wheel",
+            "Classroom random student picker",
+            "Prize wheel for giveaways",
+            "Multiple wheel templates",
+            "Save and share wheels",
+            "Custom colors and themes",
+            "Sound effects",
+            "Mobile friendly"
+        ],
+        "creator": {
+            "@type": "Organization",
+            "name": "RaffleWheel"
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Is the spin the wheel tool free to use?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes! RaffleWheel is 100% free to use with no sign-up required. Spin as many wheels as you want, whenever you want."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I use the random student picker wheel for my classroom?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Absolutely! Our classroom spinner wheel is perfect for teachers. Just add your student names, spin, and let the wheel pick a random student for you."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I create a custom prize wheel for giveaways?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Click the 'Customize' button, add your prize names, choose colors, and save. Your giveaway wheel spinner is ready to use instantly."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does the wheel spinner work on mobile devices?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, our digital wheel spinner is fully mobile responsive. Spin the wheel on your phone, tablet, or desktop with the same smooth experience."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I save my wheels for later?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes! Your wheels are saved automatically in your browser. You can also export and import wheels to share them with friends or colleagues."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is the random wheel picker truly random?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, our random wheel generator uses cryptographically strong randomization combined with realistic physics-based spin animation to ensure fair, unbiased picks."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://rafflewheel.github.io/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Spin The Wheel",
+                "item": "https://rafflewheel.github.io/#spin"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Templates",
+                "item": "https://rafflewheel.github.io/#templates"
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Header Container -->
+    <div id="header-container"></div>
+
+    <main>
+        <!-- SECTION 1: Hero with main wheel -->
+        <section class="hero" id="spin">
+            <div class="hero-bg-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+            </div>
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <span class="hero-badge">
+                        <span class="badge-dot"></span>
+                        100% Free · No Sign-up Required
+                    </span>
+                    <h1 class="hero-title">
+                        Spin The Wheel<br>
+                        <span class="gradient-text">Pick a Winner Instantly</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        The most colorful, free online <strong>spin the wheel</strong> generator. Create your own
+                        <strong>raffle wheel</strong>, <strong>prize wheel</strong>, or
+                        <strong>classroom spinner wheel</strong> in seconds. Perfect for giveaways,
+                        random student pickers, lucky draws, and fun decisions.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#wheel-app" class="btn btn-primary">
+                            <span>Spin Now</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="#templates" class="btn btn-ghost">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Browse Templates</span>
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-number">12+</div>
+                            <div class="stat-label">Wheel Templates</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">∞</div>
+                            <div class="stat-label">Free Spins</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">0$</div>
+                            <div class="stat-label">Always Free</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="floating-card card-1">
+                        <div class="card-emoji">🎯</div>
+                        <div class="card-text">Winner Picked!</div>
+                    </div>
+                    <div class="floating-card card-2">
+                        <div class="card-emoji">🎉</div>
+                        <div class="card-text">Giveaway Time</div>
+                    </div>
+                    <div class="hero-image-wrap">
+                        <img src="images/wheel-hero.svg" alt="Colorful spin the wheel illustration" class="hero-image" loading="eager">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: Main Wheel App -->
+        <section class="wheel-section" id="wheel-app">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-tag">Interactive Wheel</span>
+                    <h2 class="section-title">Try the <span class="gradient-text">Random Wheel Picker</span> Now</h2>
+                    <p class="section-subtitle">Tap the <strong>SPIN</strong> button, or edit the entries to make it your own. This free <strong>wheel spinner</strong> is fully functional and ready to play.</p>
+                </div>
+
+                <div class="wheel-app">
+                    <aside class="wheel-sidebar">
+                        <div class="sidebar-tabs">
+                            <button class="tab-btn active" data-tab="entries">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                    <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                                Entries
+                            </button>
+                            <button class="tab-btn" data-tab="design">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                    <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                                Design
+                            </button>
+                            <button class="tab-btn" data-tab="settings">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                    <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 01-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                                Settings
+                            </button>
+                        </div>
+
+                        <div class="tab-panel active" data-panel="entries">
+                            <h3>Wheel Entries</h3>
+                            <p class="panel-hint">Add or remove options. Each becomes a slice.</p>
+                            <div class="entries-list" id="entries-list"></div>
+                            <div class="entries-actions">
+                                <button class="btn-secondary" id="add-entry">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                        <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                                    </svg>
+                                    Add Entry
+                                </button>
+                                <button class="btn-secondary btn-ghost-sm" id="clear-entries">Clear All</button>
+                            </div>
+                        </div>
+
+                        <div class="tab-panel" data-panel="design">
+                            <h3>Color Theme</h3>
+                            <p class="panel-hint">Pick a preset or make your own.</p>
+                            <div class="theme-grid">
+                                <button class="theme-swatch active" data-theme="rainbow" style="background: conic-gradient(#ff6b6b, #ffd93d, #6bcf7f, #4d9fff, #b66bff, #ff6b6d);"></button>
+                                <button class="theme-swatch" data-theme="sunset" style="background: linear-gradient(135deg, #ff6b6b, #ffd93d, #ff8c42);"></button>
+                                <button class="theme-swatch" data-theme="ocean" style="background: linear-gradient(135deg, #4d9fff, #6bcf7f, #4dd0e1);"></button>
+                                <button class="theme-swatch" data-theme="candy" style="background: linear-gradient(135deg, #ff6bb5, #b66bff, #6bcfff);"></button>
+                                <button class="theme-swatch" data-theme="forest" style="background: linear-gradient(135deg, #2d6a4f, #6bcf7f, #95d5b2);"></button>
+                                <button class="theme-swatch" data-theme="neon" style="background: linear-gradient(135deg, #ff006e, #8338ec, #3a86ff, #06ffa5);"></button>
+                                <button class="theme-swatch" data-theme="pastel" style="background: linear-gradient(135deg, #ffd6e0, #c7ceea, #b5ead7, #ffdac1);"></button>
+                                <button class="theme-swatch" data-theme="fire" style="background: linear-gradient(135deg, #ff0844, #ffb199, #ff6b35);"></button>
+                            </div>
+                            <h3 style="margin-top: 20px;">Center Title</h3>
+                            <input type="text" id="center-title" value="SPIN!" maxlength="12" class="text-input">
+                        </div>
+
+                        <div class="tab-panel" data-panel="settings">
+                            <h3>Spin Settings</h3>
+                            <p class="panel-hint">Customize how the wheel behaves.</p>
+                            <label class="setting-row">
+                                <span>Spin Duration</span>
+                                <select id="spin-duration" class="text-input">
+                                    <option value="3">Quick (3s)</option>
+                                    <option value="5" selected>Normal (5s)</option>
+                                    <option value="8">Dramatic (8s)</option>
+                                    <option value="12">Epic (12s)</option>
+                                </select>
+                            </label>
+                            <label class="setting-row">
+                                <span>Sound Effects</span>
+                                <label class="switch">
+                                    <input type="checkbox" id="sound-toggle" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </label>
+                            <label class="setting-row">
+                                <span>Confetti Burst</span>
+                                <label class="switch">
+                                    <input type="checkbox" id="confetti-toggle" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </label>
+                            <label class="setting-row">
+                                <span>Remove Winner Option</span>
+                                <label class="switch">
+                                    <input type="checkbox" id="remove-winner-toggle">
+                                    <span class="slider"></span>
+                                </label>
+                            </label>
+                            <div class="danger-zone">
+                                <button class="btn-secondary btn-danger" id="reset-wheel">Reset Wheel</button>
+                            </div>
+                        </div>
+                    </aside>
+
+                    <div class="wheel-stage">
+                        <div class="wheel-pointer">
+                            <svg width="44" height="56" viewBox="0 0 44 56" fill="none">
+                                <path d="M22 56L4 14C4 8 9 4 14 4H30C35 4 40 8 40 14L22 56Z" fill="#fff" stroke="#1f2937" stroke-width="2.5" stroke-linejoin="round"/>
+                                <circle cx="22" cy="18" r="5" fill="#ef4444"/>
+                            </svg>
+                        </div>
+                        <div class="wheel-container" id="wheel-container">
+                            <canvas id="wheel-canvas" width="600" height="600"></canvas>
+                            <div class="wheel-center" id="wheel-center">SPIN!</div>
+                        </div>
+                        <div class="wheel-controls">
+                            <button class="spin-btn" id="spin-btn">
+                                <span class="spin-btn-bg"></span>
+                                <span class="spin-btn-text">SPIN</span>
+                            </button>
+                            <div class="last-result" id="last-result"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Wheel Templates Gallery (with image) -->
+        <section class="templates-section" id="templates">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-tag">Templates</span>
+                    <h2 class="section-title">Pick a <span class="gradient-text">Wheel Template</span> to Get Started</h2>
+                    <p class="section-subtitle">One click loads a pre-built <strong>spin the wheel</strong>. From <strong>classroom spinner wheel</strong> to <strong>giveaway wheel spinner</strong>, we've got a wheel for every occasion.</p>
+                </div>
+
+                <div class="templates-grid" id="templates-grid">
+                    <!-- Templates loaded via JS -->
+                </div>
+
+                <div class="templates-cta">
+                    <div class="templates-cta-content">
+                        <h3>Designed for Classrooms Everywhere</h3>
+                        <p>Teachers love our <strong>free online spinner for classroom</strong> use. The <strong>random student picker wheel</strong> is fair, fast, and fun. Add your class roster once, save the wheel, and reuse it every day.</p>
+                        <div class="templates-cta-tags">
+                            <span class="pill">Random Student Picker</span>
+                            <span class="pill">Group Maker</span>
+                            <span class="pill">Question Caller</span>
+                            <span class="pill">Class Job Assigner</span>
+                        </div>
+                    </div>
+                    <div class="templates-cta-image">
+                        <img src="images/classroom.svg" alt="Classroom spinner wheel in use" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: Features -->
+        <section class="features-section" id="features">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-tag">Why RaffleWheel</span>
+                    <h2 class="section-title">Powerful Features, <span class="gradient-text">Zero Friction</span></h2>
+                    <p class="section-subtitle">Everything you need in a modern <strong>spin the wheel generator</strong>. Built for speed, beauty, and pure spinning joy.</p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card feature-1">
+                        <div class="feature-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3>Lightning Fast Spin</h3>
+                        <p>Physics-based animation with buttery-smooth 60fps rotation. The wheel feels alive.</p>
+                    </div>
+                    <div class="feature-card feature-2">
+                        <div class="feature-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>12+ Ready Templates</h3>
+                        <p>From <strong>prize wheel</strong> classics to <strong>lucky spin</strong> challenges, jump in with one click.</p>
+                    </div>
+                    <div class="feature-card feature-3">
+                        <div class="feature-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                                <path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3>Custom Themes</h3>
+                        <p>8 gorgeous color palettes from rainbow neon to pastel candy. Mix and match your perfect <strong>digital wheel spinner</strong>.</p>
+                    </div>
+                    <div class="feature-card feature-4">
+                        <div class="feature-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                                <path d="M19 11H5a2 2 0 00-2 2v7a2 2 0 002 2h14a2 2 0 002-2v-7a2 2 0 00-2-2zM7 11V7a5 5 0 0110 0v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3>Save & Share</h3>
+                        <p>Wheels are auto-saved locally. Export to JSON, import anywhere. Share your custom <strong>spinning wheel game</strong> with anyone.</p>
+                    </div>
+                    <div class="feature-card feature-5">
+                        <div class="feature-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                                <path d="M3 3h18v18H3z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                                <path d="M9 9h6v6H9z" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3>Mobile Ready</h3>
+                        <p>Touch-optimized for phones and tablets. Spin the wheel anywhere, on any device, with the same beautiful experience.</p>
+                    </div>
+                    <div class="feature-card feature-6">
+                        <div class="feature-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 1v6M12 17v6M4.22 4.22l4.24 4.24M15.54 15.54l4.24 4.24M1 12h6M17 12h6M4.22 19.78l4.24-4.24M15.54 8.46l4.24-4.24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3>Confetti Magic</h3>
+                        <p>Every spin ends with a celebration. Sound effects, confetti bursts, and winner pop-ups make every pick feel special.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: How It Works -->
+        <section class="how-section" id="how">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-tag">How It Works</span>
+                    <h2 class="section-title">Three Steps to Your <span class="gradient-text">Lucky Spin</span></h2>
+                    <p class="section-subtitle">Start spinning in under 30 seconds. No accounts, no downloads, no nonsense.</p>
+                </div>
+
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-number">01</div>
+                        <div class="step-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Add Your Entries</h3>
+                        <p>Type in names, prizes, options, or choices — one per line. Use a template for an instant start.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">02</div>
+                        <div class="step-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
+                                <path d="M12 7v5l3 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3>Customize Look</h3>
+                        <p>Pick from 8 color themes. Add a center title. Tweak sound, confetti, and spin duration to taste.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">03</div>
+                        <div class="step-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                <path d="M21 12a9 9 0 11-9-9c2.5 0 4.8 1 6.5 2.7L21 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M21 3v5h-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Spin to Win</h3>
+                        <p>Hit the big SPIN button. Watch the wheel blur. Celebrate the winner with confetti and cheers.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: Use Cases -->
+        <section class="usecases-section" id="usecases">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-tag">Use Cases</span>
+                    <h2 class="section-title">One Wheel, <span class="gradient-text">Endless Possibilities</span></h2>
+                    <p class="section-subtitle">From classrooms to livestreams, the <strong>interactive spin wheel</strong> brings excitement everywhere.</p>
+                </div>
+
+                <div class="usecases-grid">
+                    <div class="usecase-card">
+                        <div class="usecase-emoji">🎓</div>
+                        <h3>Classroom Picker</h3>
+                        <p>Randomly call on students, assign groups, or pick homework presenters. The <strong>classroom spinner wheel</strong> makes every teacher look like a pro.</p>
+                        <ul class="usecase-list">
+                            <li>✓ Random student picker</li>
+                            <li>✓ Group generator</li>
+                            <li>✓ Question caller</li>
+                        </ul>
+                    </div>
+                    <div class="usecase-card">
+                        <div class="usecase-emoji">🎁</div>
+                        <h3>Giveaway Wheel</h3>
+                        <p>Run social media contests, store promotions, and event giveaways with a stunning <strong>giveaway wheel spinner</strong> that draws eyes.</p>
+                        <ul class="usecase-list">
+                            <li>✓ Instagram & TikTok giveaways</li>
+                            <li>✓ Live event prize draws</li>
+                            <li>✓ Customer rewards</li>
+                        </ul>
+                    </div>
+                    <div class="usecase-card">
+                        <div class="usecase-emoji">🎮</div>
+                        <h3>Spinning Wheel Game</h3>
+                        <p>Build decision games, party activities, and ice-breakers. A <strong>spinning wheel game</strong> makes every group hangout unforgettable.</p>
+                        <ul class="usecase-list">
+                            <li>✓ Truth or dare</li>
+                            <li>✓ Party games</li>
+                            <li>✓ Date night ideas</li>
+                        </ul>
+                    </div>
+                    <div class="usecase-card">
+                        <div class="usecase-emoji">🍽️</div>
+                        <h3>Decision Maker</h3>
+                        <p>Can't pick a restaurant? Movie? Lunch spot? Let the <strong>wheel picker</strong> decide. No more "I don't know, you choose" debates.</p>
+                        <ul class="usecase-list">
+                            <li>✓ Restaurant chooser</li>
+                            <li>✓ Movie picker</li>
+                            <li>✓ Daily task rotator</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 7: Advanced Customization (with image) -->
+        <section class="customize-section" id="customize">
+            <div class="container customize-grid">
+                <div class="customize-content">
+                    <span class="section-tag">Advanced Features</span>
+                    <h2 class="section-title">A <span class="gradient-text">Prize Wheel</span> Tuned to Your Style</h2>
+                    <p class="section-subtitle">More than a basic spinner — a true <strong>lucky spin</strong> engine with pro-level controls, beautiful presentation, and zero setup.</p>
+
+                    <div class="customize-list">
+                        <div class="customize-item">
+                            <div class="customize-bullet">🎨</div>
+                            <div>
+                                <h4>8 Color Palettes</h4>
+                                <p>From vibrant rainbow to elegant pastel — match your brand or mood in one click.</p>
+                            </div>
+                        </div>
+                        <div class="customize-item">
+                            <div class="customize-bullet">🎵</div>
+                            <div>
+                                <h4>Spin Sound Effects</h4>
+                                <p>Ticking clicks, swooshes, and winner fanfares. Audio cues you can toggle on or off.</p>
+                            </div>
+                        </div>
+                        <div class="customize-item">
+                            <div class="customize-bullet">🎊</div>
+                            <div>
+                                <h4>Confetti Burst</h4>
+                                <p>Multi-color confetti cannons fire on every winning spin for instant celebration.</p>
+                            </div>
+                        </div>
+                        <div class="customize-item">
+                            <div class="customize-bullet">💾</div>
+                            <div>
+                                <h4>Auto-Save Wheels</h4>
+                                <p>Your <strong>random wheel generator</strong> state persists across sessions. Close the tab, come back, your wheel is waiting.</p>
+                            </div>
+                        </div>
+                        <div class="customize-item">
+                            <div class="customize-bullet">📤</div>
+                            <div>
+                                <h4>Export & Import</h4>
+                                <p>Share wheels as JSON. Import a friend's wheel. Perfect for recurring classroom rosters or contest lists.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="customize-image">
+                    <img src="images/celebration.svg" alt="Prize wheel celebration" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 8: Tips & Tricks -->
+        <section class="tips-section" id="tips">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-tag">Pro Tips</span>
+                    <h2 class="section-title">Spin Smarter with These <span class="gradient-text">Wheel Hacks</span></h2>
+                    <p class="section-subtitle">Get the most out of your <strong>free wheel spinner</strong> with these power-user tips.</p>
+                </div>
+
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <div class="tip-num">01</div>
+                        <h4>Use the Remove Winner Toggle</h4>
+                        <p>Running a giveaway with multiple winners? Enable "Remove Winner" and the picked entry is gone after each spin — no duplicate prizes.</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-num">02</div>
+                        <h4>Weight by Repeating</h4>
+                        <p>Want a higher chance for one entry? Add it twice. Our <strong>random wheel picker</strong> uses true random across all visible slices.</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-num">03</div>
+                        <h4>Save Classroom Rosters</h4>
+                        <p>Build your class wheel once. Use it all year for cold-call questions, partners, and team shuffles.</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-num">04</div>
+                        <h4>Match Your Brand Color</h4>
+                        <p>Streaming a giveaway on Twitch or YouTube? Pick a theme palette that matches your overlay.</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-num">05</div>
+                        <h4>Dramatic Mode for Builds</h4>
+                        <p>Set duration to 12 seconds for max suspense. Perfect for big reveals and live audiences.</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-num">06</div>
+                        <h4>Keyboard Shortcuts</h4>
+                        <p>Press <kbd>Space</kbd> to spin and <kbd>Enter</kbd> to remove the last winner. Spin faster, look cooler.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 9: FAQ -->
+        <section class="faq-section" id="faq">
+            <div class="container faq-container">
+                <div class="section-head">
+                    <span class="section-tag">FAQ</span>
+                    <h2 class="section-title">Questions, <span class="gradient-text">Answered</span></h2>
+                    <p class="section-subtitle">Everything you need to know about our <strong>free spin wheel</strong> tool.</p>
+                </div>
+
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Is the spin the wheel tool really free?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>100% free, forever. No hidden fees, no premium tier, no sign-up. Spin as much as you want.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Can teachers use this for classroom random picking?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Absolutely! The <strong>random student picker wheel</strong> is one of our most popular features. Add your class list, spin, and let the wheel choose who's up next. Save the wheel once and reuse it all semester.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>How do I make a giveaway wheel for a live event?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Open the Templates section, pick "Giveaway Wheel," add your prize names, and start spinning. For live events, use a large display and the dramatic 12-second spin mode for suspense.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Does it work on phones and tablets?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes! The <strong>digital wheel spinner</strong> is fully responsive. Touch-friendly buttons, auto-scaling wheel, and the same smooth animations on any screen size.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Is the spin truly random?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes. We use cryptographically strong pseudo-randomness combined with a physics-based deceleration model. No tricks, no rigging — every slice has an equal chance.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Can I share my custom wheel with others?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes! Use the Export button to download your wheel as a JSON file. Share it via email, Discord, or wherever. Anyone can Import it to load your exact wheel.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Will my entries be saved if I refresh?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes. We auto-save your entries, theme, and settings to your browser. You can come back tomorrow and pick up right where you left off.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 10: Final CTA -->
+        <section class="cta-section" id="cta">
+            <div class="container cta-container">
+                <div class="cta-bg-shapes">
+                    <div class="cta-shape cta-shape-1"></div>
+                    <div class="cta-shape cta-shape-2"></div>
+                    <div class="cta-shape cta-shape-3"></div>
+                </div>
+                <div class="cta-content">
+                    <h2>Ready for Your <span class="gradient-text">Lucky Spin</span>?</h2>
+                    <p>Join thousands using our <strong>free online spinner for classroom</strong>, giveaways, and fun. No sign-up. No fees. Just spin.</p>
+                    <div class="cta-actions">
+                        <a href="#wheel-app" class="btn btn-primary btn-lg">
+                            <span>Spin The Wheel Now</span>
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                                <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="#templates" class="btn btn-ghost btn-lg">
+                            <span>Explore Templates</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Container -->
+    <div id="footer-container"></div>
+
+    <!-- Winner Modal -->
+    <div class="modal" id="winner-modal" aria-hidden="true">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <div class="modal-emoji" id="modal-emoji">🎉</div>
+            <h3 class="modal-title">Winner!</h3>
+            <div class="modal-winner" id="modal-winner">—</div>
+            <p class="modal-subtitle">Congratulations to the lucky pick.</p>
+            <div class="modal-actions">
+                <button class="btn btn-primary" id="modal-spin-again">Spin Again</button>
+                <button class="btn btn-ghost" id="modal-close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confetti Canvas -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <script src="js/templates.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/wheel.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
