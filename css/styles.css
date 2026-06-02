@@ -1709,6 +1709,11 @@ kbd {
     .hero-visual {
         order: 0;
     }
+   @media (max-width: 768px) {
+    .hero-visual {
+        display: none !important;
+    }
+}
 
     .hero-actions {
         justify-content: center;
